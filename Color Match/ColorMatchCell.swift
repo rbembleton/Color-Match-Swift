@@ -11,6 +11,7 @@ import UIKit
 class ColorMatchCell: UIButton {
 
     var color: UIColor?
+    var size: Float?
     
     func toggleSelected () {
         if selected == false {
@@ -30,8 +31,9 @@ class ColorMatchCell: UIButton {
         }
     }
     
-    init(frame: CGRect, color: UIColor) {
+    init(frame: CGRect, color: UIColor, size: Float) {
         self.color = color
+        self.size = size
         super.init(frame: frame)
         
         self.backgroundColor = color
@@ -40,6 +42,11 @@ class ColorMatchCell: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    override func drawRect(rect: CGRect) {
+        self.layer.cornerRadius = CGFloat(self.size! / 50)
+        super.drawRect(rect)
     }
 
 

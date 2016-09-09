@@ -107,7 +107,7 @@ class ColorMatchGrid: UIView {
         for pos in (0...(Int(gridSize * gridSize) - 1)) {
             let thisColor = randColor()
             let myFrame = CGRect(x: (CGFloat(pos) % gridSize * cellSize + 10), y: (CGFloat(Int(CGFloat(pos) / gridSize)) * cellSize + 10), width: cellSize - 10, height: cellSize - 10)
-            self.addSubview(ColorMatchCell(frame: myFrame, color: thisColor))
+            self.addSubview(ColorMatchCell(frame: myFrame, color: thisColor, size: Float(cellSize)))
         }
     }
     
