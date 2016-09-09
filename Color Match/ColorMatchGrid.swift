@@ -26,7 +26,7 @@ class ColorMatchGrid: UIView {
     var scoreLabel : UILabel?
     
     var timerLabel : UILabel?
-    var timer = 60
+    var timer = 30
     
     var level = 1
     var levelMod : Float = 1.0
@@ -61,7 +61,7 @@ class ColorMatchGrid: UIView {
     func checkLevelOver () {
         if self.subviews.count == 0 {
             level += 1
-            timer = 60
+            timer = 30
             self.recolorButton!.enabled = true
             self.setUpColors()
             self.makeGrid()
