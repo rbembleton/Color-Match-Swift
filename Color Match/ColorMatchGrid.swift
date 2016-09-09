@@ -8,12 +8,25 @@
 
 import UIKit
 
+extension UIColor {
+    static func appleBlue() -> UIColor {
+        return UIColor.init(colorLiteralRed: 14.0/255, green: 122.0/255, blue: 254.0/255, alpha: 1.0)
+    }
+}
+
 class ColorMatchGrid: UIView {
     
     var myColors: [UIColor]
     var gridSize = CGFloat(4)
     var selectedCell: ColorMatchCell? = nil
+    
+    var recolorButton : UIButton?
+    
     var score = 0
+    var scoreLabel : UILabel?
+    
+    var timerLabel : UILabel?
+    var timer = 60
     
     var level = 1
     var levelMod : Float = 1.0
@@ -27,11 +40,13 @@ class ColorMatchGrid: UIView {
         if ((selectedCell) != nil) {
         
             if (selectedCell!.backgroundColor == cell!.backgroundColor) {
+                self.recolorButton!.enabled = false
                 selectedCell!.removeFromSuperview()
                 cell!.removeFromSuperview()
                 checkLevelOver()
                 selectedCell = nil
                 self.score += (2 * level)
+                scoreLabel!.text = String(score)
             } else {
                 selectedCell!.toggleSelected()
                 selectedCell = cell
@@ -46,9 +61,20 @@ class ColorMatchGrid: UIView {
     func checkLevelOver () {
         if self.subviews.count == 0 {
             level += 1
+            timer = 60
+            self.recolorButton!.enabled = true
             self.setUpColors()
             self.makeGrid()
         }
+    }
+    
+    func levelRecolor () {
+        for view in self.subviews {
+            view.removeFromSuperview()
+        }
+        
+        self.setUpColors()
+        self.makeGrid()
     }
     
     func setUpColors () {
@@ -85,6 +111,15 @@ class ColorMatchGrid: UIView {
         }
     }
     
+    func updateTimer () -> Bool {
+        timer -= 1
+        print(timer)
+        let setText = ("00:" + (timer < 10 ? "0" : "") + (timer > 0 ? String(timer) : ""))
+        timerLabel!.text = setText
+        
+        return timer > 0
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         myColors = []
         super.init(coder: aDecoder)
@@ -101,6 +136,7 @@ class ColorMatchGrid: UIView {
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         makeGrid()
+        scoreLabel!.text = String(score)
         super.drawRect(rect)
     }
 

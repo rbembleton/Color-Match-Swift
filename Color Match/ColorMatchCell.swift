@@ -16,12 +16,12 @@ class ColorMatchCell: UIButton {
         if selected == false {
             if let view = self.superview as? ColorMatchGrid { view.updateSelectedCell(self) }
             selected = true
-            self.layer.shadowColor = UIColor.whiteColor().CGColor
-            self.layer.shadowOpacity = 1
+            self.layer.shadowColor = UIColor.blackColor().CGColor
+            self.layer.shadowOpacity = 0.4
             self.layer.shadowOffset = CGSizeZero
             self.layer.shadowRadius = 8
             self.layer.borderColor = UIColor.whiteColor().CGColor
-            self.layer.borderWidth = 1.0
+            self.layer.borderWidth = 2.0
         } else {
             if let view = self.superview as? ColorMatchGrid { view.updateSelectedCell(nil) }
             selected = false
