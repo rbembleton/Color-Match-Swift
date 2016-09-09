@@ -12,6 +12,8 @@
 		176FFAAE1D826099005513B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176FFAAC1D826099005513B1 /* Main.storyboard */; };
 		176FFAB01D826099005513B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176FFAAF1D826099005513B1 /* Assets.xcassets */; };
 		176FFAB31D826099005513B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176FFAB11D826099005513B1 /* LaunchScreen.storyboard */; };
+		176FFABB1D8266AB005513B1 /* ColorMatchGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FFABA1D8266AB005513B1 /* ColorMatchGrid.swift */; };
+		176FFABD1D8266D0005513B1 /* ColorMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FFABC1D8266D0005513B1 /* ColorMatchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		176FFAAF1D826099005513B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		176FFAB21D826099005513B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		176FFAB41D826099005513B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		176FFABA1D8266AB005513B1 /* ColorMatchGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchGrid.swift; sourceTree = "<group>"; };
+		176FFABC1D8266D0005513B1 /* ColorMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				176FFAAF1D826099005513B1 /* Assets.xcassets */,
 				176FFAB11D826099005513B1 /* LaunchScreen.storyboard */,
 				176FFAB41D826099005513B1 /* Info.plist */,
+				176FFABA1D8266AB005513B1 /* ColorMatchGrid.swift */,
+				176FFABC1D8266D0005513B1 /* ColorMatchCell.swift */,
 			);
 			path = "Color Match";
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176FFABB1D8266AB005513B1 /* ColorMatchGrid.swift in Sources */,
 				176FFAAB1D826099005513B1 /* ViewController.swift in Sources */,
 				176FFAA91D826099005513B1 /* AppDelegate.swift in Sources */,
+				176FFABD1D8266D0005513B1 /* ColorMatchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +296,7 @@
 				176FFAB91D826099005513B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
