@@ -10,13 +10,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Color Match/ColorMatchGrid.swift"
-            timestampString = "495096227.786485"
+            timestampString = "495098791.7762"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "randColor()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Color Match/ColorMatchGrid.swift"
+            timestampString = "495098188.877813"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "ColorMatchGrid"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Color_Match.ColorMatchGrid.level.getter : Swift.Int"
+                  moduleName = "Color Match"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rbembleton/Desktop/color_match_swift/Color%20Match/Color%20Match/ColorMatchGrid.swift"
+                  timestampString = "495098188.882266"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Color_Match.ColorMatchGrid.level.setter : Swift.Int"
+                  moduleName = "Color Match"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rbembleton/Desktop/color_match_swift/Color%20Match/Color%20Match/ColorMatchGrid.swift"
+                  timestampString = "495098188.882497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Color_Match.ColorMatchGrid.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Color_Match.ColorMatchGrid&gt;"
+                  moduleName = "Color Match"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rbembleton/Desktop/color_match_swift/Color%20Match/Color%20Match/ColorMatchGrid.swift"
+                  timestampString = "495098188.882632"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Color_Match.ColorMatchGrid.init (frame : __C.CGRect) -&gt; Color_Match.ColorMatchGrid"
+                  moduleName = "Color Match"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rbembleton/Desktop/color_match_swift/Color%20Match/Color%20Match/ColorMatchGrid.swift"
+                  timestampString = "495098188.882773"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

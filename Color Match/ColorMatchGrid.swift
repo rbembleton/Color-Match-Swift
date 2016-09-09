@@ -11,9 +11,15 @@ import UIKit
 class ColorMatchGrid: UIView {
     
     var myColors: [UIColor]
-    var gridSize = CGFloat(6)
+    var gridSize = CGFloat(4)
     var selectedCell: ColorMatchCell? = nil
     var score = 0
+    
+    var level = 1
+    var levelMod : Float = 1.0
+    var redMod : Float = 0.0
+    var greenMod : Float = 0.0
+    var blueMod : Float = 0.0
     
     func updateSelectedCell (cell: ColorMatchCell? ) {
         if (cell == nil) { selectedCell = nil; return }
@@ -23,9 +29,9 @@ class ColorMatchGrid: UIView {
             if (selectedCell!.backgroundColor == cell!.backgroundColor) {
                 selectedCell!.removeFromSuperview()
                 cell!.removeFromSuperview()
+                checkLevelOver()
                 selectedCell = nil
-                
-                self.score += 2
+                self.score += (2 * level)
             } else {
                 selectedCell!.toggleSelected()
                 selectedCell = cell
@@ -37,12 +43,25 @@ class ColorMatchGrid: UIView {
         
     }
     
+    func checkLevelOver () {
+        if self.subviews.count == 0 {
+            level += 1
+            self.setUpColors()
+            self.makeGrid()
+        }
+    }
+    
     func setUpColors () {
+        levelMod = 1.0 / Float(level)
+        redMod = (Float(arc4random()) * Float(1.0 - levelMod) / 0xFFFFFFFF)
+        blueMod = (Float(arc4random()) * Float(1.0 - levelMod)  / 0xFFFFFFFF)
+        greenMod = (Float(arc4random()) * Float(1.0 - levelMod) / 0xFFFFFFFF)
+        
         for _ in (0...(Int(gridSize * gridSize) / 2 - 1)) {
             let thisColor = UIColor(
-                red:  CGFloat(Float(arc4random()) / 0xFFFFFFFF),
-                green: CGFloat(Float(arc4random()) / 0xFFFFFFFF),
-                blue: CGFloat(Float(arc4random()) / 0xFFFFFFFF),
+                red:  CGFloat(redMod + levelMod * Float(arc4random()) / 0xFFFFFFFF),
+                green: CGFloat(greenMod + levelMod * Float(arc4random()) / 0xFFFFFFFF),
+                blue: CGFloat(blueMod + levelMod * Float(arc4random()) / 0xFFFFFFFF),
                 alpha: 1.0)
             for _ in (0...1) { myColors.append(thisColor) }
         }
