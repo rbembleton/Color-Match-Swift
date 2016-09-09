@@ -39,8 +39,22 @@ class ViewController: UIViewController {
         let matchGrid = ( self.view.subviews.filter { (subview) in subview.isKindOfClass(ColorMatchGrid) } )[0] as? ColorMatchGrid
         let keepGoing = matchGrid?.updateTimer()
         
+        
         if keepGoing == false {
             thisTimer?.invalidate()
+            let defaults = NSUserDefaults.standardUserDefaults()
+            var highScore : Int? = Int(defaults.stringForKey("colorMatchHighScore")!)
+            if highScore == nil || matchGrid!.score > highScore {
+                defaults.setValue("\(matchGrid!.score)", forKey: "colorMatchHighScore")
+                highScore = matchGrid!.score
+            }
+            
+            
+            let alertController = UIAlertController(title: "Game Over", message:
+                "Great job! Your score: \(matchGrid!.score)\nYour high score: \(highScore!)", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
         }
     }
 

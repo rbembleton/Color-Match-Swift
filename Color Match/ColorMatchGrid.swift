@@ -113,8 +113,7 @@ class ColorMatchGrid: UIView {
     
     func updateTimer () -> Bool {
         timer -= 1
-        print(timer)
-        let setText = ("00:" + (timer < 10 ? "0" : "") + (timer > 0 ? String(timer) : ""))
+        let setText = ("00:" + (timer < 10 ? "0" : "") + (timer > 0 ? String(timer) : "0"))
         timerLabel!.text = setText
         
         return timer > 0
