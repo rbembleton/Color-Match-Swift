@@ -18,6 +18,7 @@ class ColorMatchGrid: UIView {
     
     var myColors: [UIColor]
     var gridSize = CGFloat(4)
+    var levelTimer = 30
     var selectedCell: ColorMatchCell? = nil
     
     var recolorButton : UIButton?
@@ -61,7 +62,7 @@ class ColorMatchGrid: UIView {
     func checkLevelOver () {
         if self.subviews.count == 0 {
             level += 1
-            timer = 30
+            timer = levelTimer
             self.recolorButton!.enabled = true
             self.setUpColors()
             self.makeGrid()
@@ -111,6 +112,13 @@ class ColorMatchGrid: UIView {
         }
     }
     
+    func updateDifficulty (level: Int) {
+        gridSize = CGFloat(level)
+        levelTimer = level == 4 ? 30 : 60
+        timer = levelTimer
+        setUpColors()
+    }
+    
     func updateTimer () -> Bool {
         timer -= 1
         let setText = ("00:" + (timer < 10 ? "0" : "") + (timer > 0 ? String(timer) : "0"))
@@ -122,7 +130,7 @@ class ColorMatchGrid: UIView {
     required init?(coder aDecoder: NSCoder) {
         myColors = []
         super.init(coder: aDecoder)
-        setUpColors()
+//        setUpColors()
     }
     
     override init(frame: CGRect) {

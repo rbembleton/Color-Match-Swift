@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HighScoreViewController.swift
 //  Color Match
 //
 //  Created by RB Embleton on 9/9/16.
@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HighScoreViewController: UIViewController {
 
+    @IBOutlet weak var standardLevelLabel: UILabel!
+    @IBOutlet weak var hardLevelLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        standardLevelLabel.text = "Standard Level: \(((defaults.stringForKey("colorMatchHighScore4")) != nil ? Int(defaults.stringForKey("colorMatchHighScore4")!) : 0)!)"
+        hardLevelLabel.text = "Hard Level: \((defaults.stringForKey("colorMatchHighScore6") != nil ? Int(defaults.stringForKey("colorMatchHighScore6")!) : 0 )!)"
         // Do any additional setup after loading the view.
     }
 
@@ -31,15 +37,5 @@ class ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if (segue.identifier == "standardLevelSegue") {
-            var svc = segue!.destinationViewController as! LevelViewController;
-            svc.levelDifficulty = 4
-        } else if (segue.identifier == "hardLevelSegue") {
-            var svc = segue!.destinationViewController as! LevelViewController;
-            svc.levelDifficulty = 6
-        }
-    }
 
 }
