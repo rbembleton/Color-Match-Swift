@@ -14,11 +14,11 @@ class LevelViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var recolorButton: UIButton!
     
-    var thisTimer : NSTimer?
-    var levelDifficulty:Int!
+    var thisTimer : Timer?
+    var levelDifficulty = 4
     
-    @IBAction func recolorButton(sender: AnyObject) {
-        let matchGrid = ( self.view.subviews.filter { (subview) in subview.isKindOfClass(ColorMatchGrid) } )[0] as? ColorMatchGrid
+    @IBAction func recolorButton(_ sender: AnyObject) {
+        let matchGrid = ( self.view.subviews.filter { (subview) in subview.isKind(of: ColorMatchGrid.self) } )[0] as? ColorMatchGrid
         matchGrid!.levelRecolor()
     }
     
@@ -37,24 +37,24 @@ class LevelViewController: UIViewController {
     }
     
     func updateTimer () {
-        let matchGrid = ( self.view.subviews.filter { (subview) in subview.isKindOfClass(ColorMatchGrid) } )[0] as? ColorMatchGrid
+        let matchGrid = ( self.view.subviews.filter { (subview) in subview.isKind(of: ColorMatchGrid.self) } )[0] as? ColorMatchGrid
         let keepGoing = matchGrid?.updateTimer()
         
         
         if keepGoing == false {
             thisTimer?.invalidate()
-            let defaults = NSUserDefaults.standardUserDefaults()
-            var highScore = (defaults.stringForKey("colorMatchHighScore\(self.levelDifficulty)"))
-            if highScore == nil || matchGrid!.score > Int(highScore!) {
+            let defaults = UserDefaults.standard
+            var highScore = (defaults.string(forKey: "colorMatchHighScore\(self.levelDifficulty)"))
+            if highScore == nil || matchGrid!.score > Int(highScore!)! {
                 defaults.setValue("\(matchGrid!.score)", forKey: "colorMatchHighScore\(self.levelDifficulty)")
                 highScore = String(matchGrid!.score)
             }
             
             
             let alertController = UIAlertController(title: "Game Over", message:
-                "Great job! Your score: \(matchGrid!.score)\nYour high score: \(highScore!)", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+                "Great job! Your score: \(matchGrid!.score)\nYour high score: \(highScore!)", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
             
         }
     }
@@ -62,22 +62,16 @@ class LevelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let matchGrid = ( self.view.subviews.filter { (subview) in subview.isKindOfClass(ColorMatchGrid) } )[0] as? ColorMatchGrid
+        let matchGrid = ( self.view.subviews.filter { (subview) in subview.isKind(of: ColorMatchGrid.self) } )[0] as? ColorMatchGrid
         matchGrid?.updateDifficulty(levelDifficulty)
         matchGrid?.scoreLabel = scoreLabel
         matchGrid?.timerLabel = timerLabel
         matchGrid?.recolorButton = recolorButton
         
-        if (matchGrid != nil) { thisTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true) }
+        if (matchGrid != nil) { thisTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true) }
         
         updateFontSizes()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
 
 }

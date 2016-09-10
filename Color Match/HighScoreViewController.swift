@@ -16,9 +16,9 @@ class HighScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        standardLevelLabel.text = "Standard Level: \(((defaults.stringForKey("colorMatchHighScore4")) != nil ? Int(defaults.stringForKey("colorMatchHighScore4")!) : 0)!)"
-        hardLevelLabel.text = "Hard Level: \((defaults.stringForKey("colorMatchHighScore6") != nil ? Int(defaults.stringForKey("colorMatchHighScore6")!) : 0 )!)"
+        let defaults = UserDefaults.standard
+        standardLevelLabel.text = "Standard Level: \(((defaults.string(forKey: "colorMatchHighScore4")) != nil ? Int(defaults.string(forKey: "colorMatchHighScore4")!) : 0)!)"
+        hardLevelLabel.text = "Hard Level: \((defaults.string(forKey: "colorMatchHighScore6") != nil ? Int(defaults.string(forKey: "colorMatchHighScore6")!) : 0 )!)"
         // Do any additional setup after loading the view.
     }
 

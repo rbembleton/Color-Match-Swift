@@ -32,12 +32,13 @@ class ViewController: UIViewController {
     }
     */
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        print(segue)
         if (segue.identifier == "standardLevelSegue") {
-            var svc = segue!.destinationViewController as! LevelViewController;
+            let svc = segue.destination as! LevelViewController;
             svc.levelDifficulty = 4
         } else if (segue.identifier == "hardLevelSegue") {
-            var svc = segue!.destinationViewController as! LevelViewController;
+            let svc = segue.destination as! LevelViewController;
             svc.levelDifficulty = 6
         }
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1747B0DF1D835FFC00DCBD7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0DE1D835FFC00DCBD7E /* ViewController.swift */; };
 		1747B0E11D836D6000DCBD7E /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */; };
+		1747B0E31D839F0C00DCBD7E /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0E21D839F0C00DCBD7E /* Segues.swift */; };
 		176FFAA91D826099005513B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FFAA81D826099005513B1 /* AppDelegate.swift */; };
 		176FFAAB1D826099005513B1 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FFAAA1D826099005513B1 /* LevelViewController.swift */; };
 		176FFAAE1D826099005513B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176FFAAC1D826099005513B1 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		1747B0DE1D835FFC00DCBD7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
+		1747B0E21D839F0C00DCBD7E /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		176FFAA51D826099005513B1 /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		176FFAA81D826099005513B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		176FFAAA1D826099005513B1 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				176FFAB41D826099005513B1 /* Info.plist */,
 				176FFABA1D8266AB005513B1 /* ColorMatchGrid.swift */,
 				176FFABC1D8266D0005513B1 /* ColorMatchCell.swift */,
+				1747B0E21D839F0C00DCBD7E /* Segues.swift */,
 			);
 			path = "Color Match";
 			sourceTree = "<group>";
@@ -103,12 +106,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "RB Embleton";
 				TargetAttributes = {
 					176FFAA41D826099005513B1 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9FBQJWZWCQ;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -150,6 +154,7 @@
 			files = (
 				1747B0DF1D835FFC00DCBD7E /* ViewController.swift in Sources */,
 				176FFABB1D8266AB005513B1 /* ColorMatchGrid.swift in Sources */,
+				1747B0E31D839F0C00DCBD7E /* Segues.swift in Sources */,
 				176FFAAB1D826099005513B1 /* LevelViewController.swift in Sources */,
 				176FFAA91D826099005513B1 /* AppDelegate.swift in Sources */,
 				176FFABD1D8266D0005513B1 /* ColorMatchCell.swift in Sources */,
@@ -193,8 +198,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -239,8 +246,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -259,6 +268,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -275,6 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rbembleton.Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -289,6 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rbembleton.Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -35,15 +35,15 @@ class ColorMatchGrid: UIView {
     var greenMod : Float = 0.0
     var blueMod : Float = 0.0
     
-    func updateSelectedCell (cell: ColorMatchCell? ) {
+    func updateSelectedCell (_ cell: ColorMatchCell? ) {
         if (cell == nil) { selectedCell = nil; return }
         
         if ((selectedCell) != nil) {
         
             if (selectedCell!.backgroundColor == cell!.backgroundColor) {
-                self.recolorButton!.enabled = false
-                selectedCell!.removeFromSuperview()
-                cell!.removeFromSuperview()
+                self.recolorButton!.isEnabled = false
+                selectedCell!.superview?.removeFromSuperview()
+                cell!.superview?.removeFromSuperview()
                 checkLevelOver()
                 selectedCell = nil
                 self.score += (2 * level)
@@ -63,7 +63,7 @@ class ColorMatchGrid: UIView {
         if self.subviews.count == 0 {
             level += 1
             timer = levelTimer
-            self.recolorButton!.enabled = true
+            self.recolorButton!.isEnabled = true
             self.setUpColors()
             self.makeGrid()
         }
@@ -98,7 +98,7 @@ class ColorMatchGrid: UIView {
     func randColor() -> UIColor {
         let randIdx = Int(arc4random_uniform(UInt32(myColors.count)))
         let randColor = myColors[randIdx]
-        myColors.removeAtIndex(randIdx)
+        myColors.remove(at: randIdx)
         return randColor
     }
     
@@ -107,12 +107,14 @@ class ColorMatchGrid: UIView {
         let cellSize = (myHeight - 10) / gridSize
         for pos in (0...(Int(gridSize * gridSize) - 1)) {
             let thisColor = randColor()
-            let myFrame = CGRect(x: (CGFloat(pos) % gridSize * cellSize + 10), y: (CGFloat(Int(CGFloat(pos) / gridSize)) * cellSize + 10), width: cellSize - 10, height: cellSize - 10)
-            self.addSubview(ColorMatchCell(frame: myFrame, color: thisColor, size: Float(cellSize)))
+            let myFrame = CGRect(x: (CGFloat(pos).truncatingRemainder(dividingBy: gridSize) * cellSize + 10), y: (CGFloat(Int(CGFloat(pos) / gridSize)) * cellSize + 10), width: cellSize - 10, height: cellSize - 10)
+            let shadowView = UIView(frame: myFrame)
+            shadowView.addSubview(ColorMatchCell(frame: CGRect(x: 0.0, y: 0.0, width: (cellSize - 10.0), height: (cellSize - 10.0)), color: thisColor, size: Float(cellSize)))
+            self.addSubview(shadowView)
         }
     }
     
-    func updateDifficulty (level: Int) {
+    func updateDifficulty (_ level: Int) {
         gridSize = CGFloat(level)
         levelTimer = level == 4 ? 30 : 60
         timer = levelTimer
@@ -141,10 +143,10 @@ class ColorMatchGrid: UIView {
 
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         makeGrid()
         scoreLabel!.text = String(score)
-        super.drawRect(rect)
+        super.draw(rect)
     }
 
 
