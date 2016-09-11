@@ -24,7 +24,7 @@ You can remove a pair of matches by touching on both. If they aren't a match you
 ### Match ###
 ![make_match](docs/make_match.png)
 
-With each subsequent level, the color spectrum tightens, making it harder to distinguish between colors. However, at the beginning of each level you have the option to recolor the board within the constrains of the level. You can recolor the board as many times as you like, but be warned, spending too long recoloring will net you with not as much time to make matches, so use recoloring wisely.
+With each subsequent level, the color spectrum tightens, making it harder to distinguish between colors. However, at the beginning of each level you have the option to recolor the board within the constrains of the level. You can recolor the board as many times as you like, but be warned, spending too long recoloring will net you with less time to make matches, so recolor wisely.
 
 ### Recolor ###
 ![recolor](docs/recolor.png)
