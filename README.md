@@ -7,6 +7,7 @@ Color Match is a fun and addictive color matching game where players are tasked 
 - Swift 3.0
 - Compatible with iOS 7.0 and higher (iPad, iPhone)
 - XCode 8.0
+- OOP
 
 ## How to Play ##
 
