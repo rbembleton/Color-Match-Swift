@@ -70,6 +70,8 @@ class LevelViewController: UIViewController {
         matchGrid?.levelLabel = levelLabel
         matchGrid?.recolorButton = recolorButton
         
+        recolorButton.setTitleColor(UIColor.lightGray, for: .disabled)
+        
         if (matchGrid != nil) { thisTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true) }
         
         updateFontSizes()
