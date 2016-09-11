@@ -127,6 +127,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQC-Mm-llq">
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="How to Play"/>
+                                <connections>
+                                    <segue destination="9k3-xt-fB4" kind="show" id="Rir-EP-Jgh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiP-7C-ZFu">
                                 <constraints>
@@ -240,9 +243,130 @@
             </objects>
             <point key="canvasLocation" x="-494" y="674"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rGY-9c-2UG">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="9k3-xt-fB4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QUQ-Bq-5uw"/>
+                        <viewControllerLayoutGuide type="bottom" id="gbR-ib-irj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GEj-3G-RhH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqI-aF-42F">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="oKP-Ab-ytd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4K-sR-8fy">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-gP-tXR">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Color Match! At the beginning of each level, you'll be presented with a screen of squares to match. " lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLR-e2-cjK">
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="xwX-x8-P1f"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match squares of the same color within the time given." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ox-Fe-JkO">
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="match" translatesAutoresizingMaskIntoConstraints="NO" id="9Qs-0j-cDW"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7Z-Pc-WHx">
+                                                <string key="text">Each subsequent level will have a tighter spectrum of colors. At the begining of each level you can choose to recolor the board as many times as you want, and the board will recolor within the constraints of the level's spectrum. But be warned, once you start matching you can no longer recolor the level.</string>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recolor" translatesAutoresizingMaskIntoConstraints="NO" id="4wA-Q1-FIr"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As the levels get harder, you get more points for each match. Try to get as high a score as possible and have fun!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYQ-U9-ilp">
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="X7Z-Pc-WHx" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="3UN-QV-1yC"/>
+                                            <constraint firstItem="X7Z-Pc-WHx" firstAttribute="top" secondItem="9Qs-0j-cDW" secondAttribute="bottom" constant="8" id="4eI-hi-E1E"/>
+                                            <constraint firstItem="4wA-Q1-FIr" firstAttribute="top" secondItem="X7Z-Pc-WHx" secondAttribute="bottom" constant="8" id="5eW-VA-sgs"/>
+                                            <constraint firstAttribute="bottom" secondItem="VYQ-U9-ilp" secondAttribute="bottom" constant="8" id="6Xz-Xr-Jqr"/>
+                                            <constraint firstItem="4Ox-Fe-JkO" firstAttribute="top" secondItem="xwX-x8-P1f" secondAttribute="bottom" constant="8" id="DbH-Jz-aPH"/>
+                                            <constraint firstAttribute="trailing" secondItem="HLR-e2-cjK" secondAttribute="trailing" constant="8" id="GjD-Vk-rhm"/>
+                                            <constraint firstItem="HLR-e2-cjK" firstAttribute="top" secondItem="dDj-gP-tXR" secondAttribute="top" constant="8" id="Hze-14-gte"/>
+                                            <constraint firstItem="VYQ-U9-ilp" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="IPn-Kr-Jd5"/>
+                                            <constraint firstItem="4wA-Q1-FIr" firstAttribute="top" secondItem="X7Z-Pc-WHx" secondAttribute="bottom" constant="8" id="KAs-1g-wwl"/>
+                                            <constraint firstItem="4wA-Q1-FIr" firstAttribute="top" secondItem="X7Z-Pc-WHx" secondAttribute="bottom" constant="8" id="KlH-zs-cEW"/>
+                                            <constraint firstAttribute="trailing" secondItem="VYQ-U9-ilp" secondAttribute="trailing" constant="8" id="KpV-c8-5uj"/>
+                                            <constraint firstItem="9Qs-0j-cDW" firstAttribute="top" secondItem="4Ox-Fe-JkO" secondAttribute="bottom" constant="8" id="L1b-FI-iVj"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Qs-0j-cDW" secondAttribute="trailing" constant="8" id="L93-na-9Vz"/>
+                                            <constraint firstItem="VYQ-U9-ilp" firstAttribute="top" secondItem="4wA-Q1-FIr" secondAttribute="bottom" constant="8" id="Lte-dK-VVo"/>
+                                            <constraint firstItem="9Qs-0j-cDW" firstAttribute="top" secondItem="4Ox-Fe-JkO" secondAttribute="bottom" constant="8" id="NVW-xI-u38"/>
+                                            <constraint firstItem="HLR-e2-cjK" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="OL7-VG-rJH"/>
+                                            <constraint firstAttribute="trailing" secondItem="VYQ-U9-ilp" secondAttribute="trailing" constant="8" id="W9R-F8-q52"/>
+                                            <constraint firstAttribute="trailing" secondItem="4wA-Q1-FIr" secondAttribute="trailing" constant="8" id="ZNX-PL-Cgd"/>
+                                            <constraint firstItem="xwX-x8-P1f" firstAttribute="top" secondItem="HLR-e2-cjK" secondAttribute="bottom" constant="8" id="bIT-E9-d5F"/>
+                                            <constraint firstItem="9Qs-0j-cDW" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="gHj-cy-C7H"/>
+                                            <constraint firstItem="4Ox-Fe-JkO" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="hMR-dg-i9z"/>
+                                            <constraint firstItem="xwX-x8-P1f" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="hRa-19-3fe"/>
+                                            <constraint firstItem="VYQ-U9-ilp" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="hld-q3-keZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Ox-Fe-JkO" secondAttribute="trailing" constant="8" id="iAS-0E-rmz"/>
+                                            <constraint firstAttribute="trailing" secondItem="X7Z-Pc-WHx" secondAttribute="trailing" constant="8" id="rmU-Gc-T6R"/>
+                                            <constraint firstItem="4wA-Q1-FIr" firstAttribute="leading" secondItem="dDj-gP-tXR" secondAttribute="leading" constant="8" id="s4x-Xb-TrX"/>
+                                            <constraint firstAttribute="trailing" secondItem="xwX-x8-P1f" secondAttribute="trailing" constant="8" id="vVR-BN-CTv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dDj-gP-tXR" firstAttribute="leading" secondItem="C4K-sR-8fy" secondAttribute="leading" id="0h1-8O-XfP"/>
+                                    <constraint firstAttribute="bottom" secondItem="dDj-gP-tXR" secondAttribute="bottom" constant="8" id="CDo-0a-EWi"/>
+                                    <constraint firstAttribute="trailing" secondItem="dDj-gP-tXR" secondAttribute="trailing" id="CgD-lf-r3M"/>
+                                    <constraint firstItem="dDj-gP-tXR" firstAttribute="width" secondItem="C4K-sR-8fy" secondAttribute="width" id="KTw-Tc-lb3"/>
+                                    <constraint firstItem="dDj-gP-tXR" firstAttribute="top" secondItem="C4K-sR-8fy" secondAttribute="top" id="lSu-0P-Gw1"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-6Z-n3S">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="&lt;&lt;">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="U7D-t4-E24" kind="show" id="wa4-r7-gIp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bwa-6Z-n3S" firstAttribute="top" secondItem="QUQ-Bq-5uw" secondAttribute="bottom" id="3pZ-Be-ODs"/>
+                            <constraint firstItem="C4K-sR-8fy" firstAttribute="top" secondItem="gqI-aF-42F" secondAttribute="bottom" constant="8" id="Amq-ne-t35"/>
+                            <constraint firstItem="gqI-aF-42F" firstAttribute="top" secondItem="QUQ-Bq-5uw" secondAttribute="bottom" constant="8" id="Nb7-95-hte"/>
+                            <constraint firstItem="gqI-aF-42F" firstAttribute="centerX" secondItem="GEj-3G-RhH" secondAttribute="centerX" id="a4r-oW-1lB"/>
+                            <constraint firstAttribute="trailing" secondItem="C4K-sR-8fy" secondAttribute="trailing" constant="8" id="k5f-NE-XGh"/>
+                            <constraint firstItem="gbR-ib-irj" firstAttribute="top" secondItem="C4K-sR-8fy" secondAttribute="bottom" constant="8" id="mTd-NS-ibP"/>
+                            <constraint firstItem="C4K-sR-8fy" firstAttribute="leading" secondItem="GEj-3G-RhH" secondAttribute="leading" constant="8" id="rVK-sw-5A7"/>
+                            <constraint firstItem="bwa-6Z-n3S" firstAttribute="leading" secondItem="GEj-3G-RhH" secondAttribute="leadingMargin" id="xhO-0u-x6X"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qs-64-b1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="676.91154422788611"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="match" width="270" height="274"/>
+        <image name="recolor" width="263" height="300"/>
+        <image name="start" width="266" height="268"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ohD-N6-Ayd"/>
+        <segue reference="wa4-r7-gIp"/>
         <segue reference="yg2-xr-njN"/>
     </inferredMetricsTieBreakers>
 </document>
