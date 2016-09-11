@@ -104,7 +104,7 @@ class ColorMatchGrid: UIView {
     
     func makeGrid () {
         let myHeight = self.bounds.height
-        let cellSize = (myHeight - 10) / gridSize
+        let cellSize = CGFloat(Int((myHeight - 10) / gridSize))
         for pos in (0...(Int(gridSize * gridSize) - 1)) {
             let thisColor = randColor()
             let myFrame = CGRect(x: (CGFloat(pos).truncatingRemainder(dividingBy: gridSize) * cellSize + 10), y: (CGFloat(Int(CGFloat(pos) / gridSize)) * cellSize + 10), width: cellSize - 10, height: cellSize - 10)

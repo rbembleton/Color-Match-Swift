@@ -12,7 +12,6 @@ class ColorMatchCell: UIButton {
 
     var color: UIColor?
     var size: Float?
-    var shadowView: UIView?
     
     func toggleSelected () {
         if isSelected == false {
