@@ -67,6 +67,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Level 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0t-ic-aor">
+                                <frame key="frameInset" minX="248" minY="532" width="64" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="rEz-v5-dTK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,16 +88,19 @@
                             <constraint firstItem="F1G-P8-D69" firstAttribute="top" secondItem="Nob-Kh-jjO" secondAttribute="bottom" id="CN7-5k-STB"/>
                             <constraint firstItem="F1G-P8-D69" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" priority="999" constant="-10" id="D9M-wQ-3cm"/>
                             <constraint firstItem="F1G-P8-D69" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="999" constant="10" id="GF7-tV-LCH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O0t-ic-aor" secondAttribute="bottom" constant="8" id="HKw-7u-jpB"/>
                             <constraint firstItem="F1G-P8-D69" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iyz-wS-Rxh"/>
                             <constraint firstItem="yKm-2H-8cA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JcQ-7T-FKk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="yKm-2H-8cA" secondAttribute="bottom" constant="40" id="Jl4-en-Huh"/>
                             <constraint firstItem="ZzO-7F-jOy" firstAttribute="trailing" secondItem="F1G-P8-D69" secondAttribute="trailing" constant="-10" id="Soo-IJ-caz"/>
                             <constraint firstItem="yKm-2H-8cA" firstAttribute="top" secondItem="F1G-P8-D69" secondAttribute="bottom" priority="800" constant="50" id="YF9-HZ-Kgd"/>
+                            <constraint firstAttribute="trailing" secondItem="O0t-ic-aor" secondAttribute="trailing" constant="8" id="fEc-Go-0Tz"/>
                             <constraint firstItem="F1G-P8-D69" firstAttribute="top" secondItem="ZzO-7F-jOy" secondAttribute="bottom" id="hek-wW-XSP"/>
                             <constraint firstItem="zeK-Ym-L0f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWP-g1-J3v"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="levelLabel" destination="O0t-ic-aor" id="kPs-mo-VuZ"/>
                         <outlet property="recolorButton" destination="Nob-Kh-jjO" id="Q5c-LS-0mw"/>
                         <outlet property="scoreLabel" destination="yKm-2H-8cA" id="48n-ST-5cb"/>
                         <outlet property="timerLabel" destination="ZzO-7F-jOy" id="DUc-ve-uZm"/>
@@ -368,7 +380,7 @@
         <image name="start" width="266" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eNQ-cO-evd"/>
+        <segue reference="ltI-oN-b5Y"/>
         <segue reference="GZZ-WJ-0mT"/>
     </inferredMetricsTieBreakers>
 </document>

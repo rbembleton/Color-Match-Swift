@@ -13,6 +13,7 @@ class LevelViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var recolorButton: UIButton!
+    @IBOutlet weak var levelLabel: UILabel!
     
     var thisTimer : Timer?
     var levelDifficulty = 4
@@ -66,6 +67,7 @@ class LevelViewController: UIViewController {
         matchGrid?.updateDifficulty(levelDifficulty)
         matchGrid?.scoreLabel = scoreLabel
         matchGrid?.timerLabel = timerLabel
+        matchGrid?.levelLabel = levelLabel
         matchGrid?.recolorButton = recolorButton
         
         if (matchGrid != nil) { thisTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true) }

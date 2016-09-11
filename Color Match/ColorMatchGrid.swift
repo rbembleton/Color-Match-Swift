@@ -31,6 +31,8 @@ class ColorMatchGrid: UIView {
     
     var level = 1
     var levelMod : Float = 1.0
+    var levelLabel : UILabel?
+    
     var redMod : Float = 0.0
     var greenMod : Float = 0.0
     var blueMod : Float = 0.0
@@ -46,7 +48,7 @@ class ColorMatchGrid: UIView {
                 cell!.superview?.removeFromSuperview()
                 checkLevelOver()
                 selectedCell = nil
-                self.score += (2 * level)
+                self.score += (Int(2 + timer/7) * level)
                 scoreLabel!.text = String(score)
             } else {
                 selectedCell!.toggleSelected()
@@ -61,8 +63,10 @@ class ColorMatchGrid: UIView {
     
     func checkLevelOver () {
         if self.subviews.count == 0 {
+            score += level * timer
             level += 1
             timer = levelTimer
+            self.levelLabel?.text = "Level \(level)"
             self.recolorButton!.isEnabled = true
             self.setUpColors()
             self.makeGrid()
@@ -146,6 +150,7 @@ class ColorMatchGrid: UIView {
     override func draw(_ rect: CGRect) {
         makeGrid()
         scoreLabel!.text = String(score)
+        levelLabel!.text = "Level \(level)"
         super.draw(rect)
     }
 
