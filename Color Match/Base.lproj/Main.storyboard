@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-4o-rV0">
@@ -107,7 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RUa-8w-goN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ue4-OI-CoY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4V-pN-cYw">
@@ -157,9 +157,10 @@
                             <constraint firstItem="hQC-Mm-llq" firstAttribute="centerX" secondItem="Ue4-OI-CoY" secondAttribute="centerX" id="1H6-Tk-OZZ"/>
                             <constraint firstItem="QNr-d3-wxg" firstAttribute="centerX" secondItem="Ue4-OI-CoY" secondAttribute="centerX" id="2Qd-3w-IFM"/>
                             <constraint firstItem="x4V-pN-cYw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oiP-7C-ZFu" secondAttribute="bottom" priority="999" constant="50" id="2SE-1b-bnK"/>
+                            <constraint firstItem="8Ac-ZZ-oSm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cXM-q8-Amw" secondAttribute="bottom" constant="60" id="4DM-52-KF5"/>
                             <constraint firstItem="cXM-q8-Amw" firstAttribute="top" secondItem="hQC-Mm-llq" secondAttribute="bottom" constant="8" id="8bI-Cf-wHt"/>
-                            <constraint firstItem="QNr-d3-wxg" firstAttribute="centerY" secondItem="Ue4-OI-CoY" secondAttribute="centerY" priority="750" constant="-100" id="BKq-zC-98c"/>
-                            <constraint firstItem="hQC-Mm-llq" firstAttribute="centerY" secondItem="Ue4-OI-CoY" secondAttribute="centerY" constant="100" id="Hzn-yj-34V"/>
+                            <constraint firstItem="QNr-d3-wxg" firstAttribute="centerY" secondItem="Ue4-OI-CoY" secondAttribute="centerY" priority="500" constant="-100" id="BKq-zC-98c"/>
+                            <constraint firstItem="hQC-Mm-llq" firstAttribute="centerY" secondItem="Ue4-OI-CoY" secondAttribute="centerY" priority="500" constant="100" id="Hzn-yj-34V"/>
                             <constraint firstItem="oiP-7C-ZFu" firstAttribute="top" secondItem="eQb-mC-N5H" secondAttribute="bottom" constant="10" id="gmm-T0-IqP"/>
                             <constraint firstItem="cXM-q8-Amw" firstAttribute="centerX" secondItem="Ue4-OI-CoY" secondAttribute="centerX" id="k62-W3-dxE"/>
                             <constraint firstItem="QNr-d3-wxg" firstAttribute="top" secondItem="x4V-pN-cYw" secondAttribute="bottom" constant="12" id="nBa-xv-vLW"/>
@@ -183,7 +184,7 @@
                         <viewControllerLayoutGuide type="bottom" id="a40-xB-IcI"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" id="VFp-9c-hOH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDg-Cx-s51">
@@ -253,7 +254,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gbR-ib-irj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GEj-3G-RhH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqI-aF-42F">
@@ -368,6 +369,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eNQ-cO-evd"/>
-        <segue reference="yg2-xr-njN"/>
+        <segue reference="GZZ-WJ-0mT"/>
     </inferredMetricsTieBreakers>
 </document>
