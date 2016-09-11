@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170DE0421D8597C30079F793 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DE0411D8597C30079F793 /* RoundedUIView.swift */; };
 		1747B0DF1D835FFC00DCBD7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0DE1D835FFC00DCBD7E /* ViewController.swift */; };
 		1747B0E11D836D6000DCBD7E /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */; };
 		1747B0E31D839F0C00DCBD7E /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0E21D839F0C00DCBD7E /* Segues.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170DE0411D8597C30079F793 /* RoundedUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
 		1747B0DE1D835FFC00DCBD7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		1747B0E21D839F0C00DCBD7E /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		176FFAA71D826099005513B1 /* Color Match */ = {
 			isa = PBXGroup;
 			children = (
+				170DE0411D8597C30079F793 /* RoundedUIView.swift */,
 				176FFAA81D826099005513B1 /* AppDelegate.swift */,
 				176FFAAA1D826099005513B1 /* LevelViewController.swift */,
 				1747B0DE1D835FFC00DCBD7E /* ViewController.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170DE0421D8597C30079F793 /* RoundedUIView.swift in Sources */,
 				1747B0DF1D835FFC00DCBD7E /* ViewController.swift in Sources */,
 				176FFABB1D8266AB005513B1 /* ColorMatchGrid.swift in Sources */,
 				1747B0E31D839F0C00DCBD7E /* Segues.swift in Sources */,
