@@ -4,6 +4,18 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Color Match - Squares.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Color Match copy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Color Match.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +25,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>176FFAA41D826099005513B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1785E0F71D87291B000200D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1785E10E1D8729A7000200D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

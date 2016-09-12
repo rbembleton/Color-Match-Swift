@@ -69,7 +69,7 @@ class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(
         using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
-        let fromVC = transitionContext.viewController(
+        _ = transitionContext.viewController(
             forKey: UITransitionContextViewControllerKey.from)
         let toVC = transitionContext.viewController(
             forKey: UITransitionContextViewControllerKey.to)
