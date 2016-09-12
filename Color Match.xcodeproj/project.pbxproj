@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		170DE0421D8597C30079F793 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DE0411D8597C30079F793 /* RoundedUIView.swift */; };
 		170DE0441D85D24E0079F793 /* WC_RoughTrad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170DE0431D85D24E0079F793 /* WC_RoughTrad.ttf */; };
+		170DE04C1D8628370079F793 /* LobsterTwo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170DE04B1D8628370079F793 /* LobsterTwo-Bold.ttf */; };
 		1747B0DF1D835FFC00DCBD7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0DE1D835FFC00DCBD7E /* ViewController.swift */; };
 		1747B0E11D836D6000DCBD7E /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */; };
 		1747B0E31D839F0C00DCBD7E /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1747B0E21D839F0C00DCBD7E /* Segues.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		170DE0411D8597C30079F793 /* RoundedUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
 		170DE0431D85D24E0079F793 /* WC_RoughTrad.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WC_RoughTrad.ttf; sourceTree = "<group>"; };
+		170DE04B1D8628370079F793 /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
 		1747B0DE1D835FFC00DCBD7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		1747B0E21D839F0C00DCBD7E /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				176FFAAA1D826099005513B1 /* LevelViewController.swift */,
 				1747B0DE1D835FFC00DCBD7E /* ViewController.swift */,
 				176FFAAC1D826099005513B1 /* Main.storyboard */,
+				170DE04B1D8628370079F793 /* LobsterTwo-Bold.ttf */,
 				1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */,
 				176FFAAF1D826099005513B1 /* Assets.xcassets */,
 				170DE0431D85D24E0079F793 /* WC_RoughTrad.ttf */,
@@ -145,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170DE04C1D8628370079F793 /* LobsterTwo-Bold.ttf in Resources */,
 				176FFAB31D826099005513B1 /* LaunchScreen.storyboard in Resources */,
 				170DE0441D85D24E0079F793 /* WC_RoughTrad.ttf in Resources */,
 				176FFAB01D826099005513B1 /* Assets.xcassets in Resources */,
