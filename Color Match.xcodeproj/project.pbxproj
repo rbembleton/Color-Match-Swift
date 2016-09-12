@@ -20,6 +20,7 @@
 		176FFAB31D826099005513B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176FFAB11D826099005513B1 /* LaunchScreen.storyboard */; };
 		176FFABB1D8266AB005513B1 /* ColorMatchGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FFABA1D8266AB005513B1 /* ColorMatchGrid.swift */; };
 		176FFABD1D8266D0005513B1 /* ColorMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176FFABC1D8266D0005513B1 /* ColorMatchCell.swift */; };
+		17E398971D863A8E005BF398 /* pictonic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E398961D863A8E005BF398 /* pictonic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		176FFAB41D826099005513B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		176FFABA1D8266AB005513B1 /* ColorMatchGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchGrid.swift; sourceTree = "<group>"; };
 		176FFABC1D8266D0005513B1 /* ColorMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchCell.swift; sourceTree = "<group>"; };
+		17E398961D863A8E005BF398 /* pictonic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pictonic.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				1747B0DE1D835FFC00DCBD7E /* ViewController.swift */,
 				176FFAAC1D826099005513B1 /* Main.storyboard */,
 				170DE04B1D8628370079F793 /* LobsterTwo-Bold.ttf */,
+				17E398961D863A8E005BF398 /* pictonic.ttf */,
 				1747B0E01D836D6000DCBD7E /* HighScoreViewController.swift */,
 				176FFAAF1D826099005513B1 /* Assets.xcassets */,
 				170DE0431D85D24E0079F793 /* WC_RoughTrad.ttf */,
@@ -151,6 +154,7 @@
 				170DE04C1D8628370079F793 /* LobsterTwo-Bold.ttf in Resources */,
 				176FFAB31D826099005513B1 /* LaunchScreen.storyboard in Resources */,
 				170DE0441D85D24E0079F793 /* WC_RoughTrad.ttf in Resources */,
+				17E398971D863A8E005BF398 /* pictonic.ttf in Resources */,
 				176FFAB01D826099005513B1 /* Assets.xcassets in Resources */,
 				176FFAAE1D826099005513B1 /* Main.storyboard in Resources */,
 			);
