@@ -1,6 +1,6 @@
 # Color Match #
 
-[Download from iOS App Store](https://itunes.apple.com/us/app/color-match-squares/id1153724046)
+[View on iOS App Store](https://itunes.apple.com/us/app/color-match-squares/id1153724046)
 
 Color Match is a fun and addictive color matching game where players are tasked with matching like colored squares. Sound too easy? Well don't you worry, with each level the color spectrum narrows, eventually where all of the squares look nearly identical.
 
